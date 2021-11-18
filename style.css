@@ -1,0 +1,13 @@
+.grid-container {
+  border: purple 5px solid;
+  background: gray;
+  padding: 400px;
+  height: auto;
+  width: auto;
+}
+
+.grid-border {
+  border: black 2px solid;
+  background: blue;
+  padding: 500px;
+}
