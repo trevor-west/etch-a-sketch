@@ -1,13 +1,32 @@
-.grid-container {
-  border: purple 5px solid;
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#grid-container {
   background: gray;
-  padding: 400px;
-  height: auto;
+  padding: 10px;
+  height: 500px;
+  max-width: 550px;
+  flex-wrap: wrap;
   width: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .grid-border {
   border: black 2px solid;
   background: blue;
-  padding: 500px;
+  padding: 55px;
+  max-height: 50px;
+}
+
+.red-text {
+  color: red;
+}
+
+.black {
+  background: black;
 }
