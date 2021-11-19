@@ -6,21 +6,18 @@
 }
 
 #grid-container {
-  background: gray;
-  padding: 10px;
-  height: 500px;
-  max-width: 550px;
+  border: black solid 1px;
+  padding: 0px;
+  max-width: 640px;
+  max-height: 640px;
   flex-wrap: wrap;
-  width: auto;
   display: flex;
   justify-content: center;
 }
 
 .grid-border {
-  border: black 2px solid;
-  background: blue;
-  padding: 55px;
-  max-height: 50px;
+  background: white;
+  padding: 10px;
 }
 
 .red-text {
