@@ -13,7 +13,7 @@ function removeAllChildNodes(parent) {
   }
 }
 
-
+/*
 function newEtchCheck(newEtch) {
   newEtch = prompt("What do you want the size of the new grid? (max 100)");
   if (newEtch > 100) {
@@ -23,9 +23,28 @@ function newEtchCheck(newEtch) {
     return newEtch;
   }
 }
+*/
+
+// for more on css grid see: https://css-tricks.com/snippets/css/complete-guide-grid/
+
+
+// https://newbedev.com/creating-a-16x16-grid-using-javascript
+
+function makeRows(rows, cols) {
+  gridContainer.style.setProperty('--grid-rows', rows);
+  gridContainer.style.setProperty('--grid-cols', cols);
+  for (c = 0; c < (rows * cols); c++) {
+    let cell = document.createElement("div");
+    cell.innerText = (c + 1);
+    container.appendChild(cell).className = "grid-item";
+  };
+};
+
+makeRows(32, 32);
 
 const btn = document.querySelector('button');
 
+/*
 btn.addEventListener('click', () => {
   gridDivHover.forEach((div) => {
     div.classList.remove('black');
@@ -43,8 +62,9 @@ btn.addEventListener('click', () => {
     });
   });
 });
+*/
 
-const gridDivHover = document.querySelectorAll('.grid-border');
+const gridDivHover = document.querySelectorAll('.grid-item');
 
 gridDivHover.forEach((div) => {
     div.addEventListener('mouseover', () => {
