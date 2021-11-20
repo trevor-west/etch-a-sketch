@@ -31,11 +31,17 @@ btn.addEventListener('click', () => {
     div.classList.remove('black');
   });
   removeAllChildNodes(gridContainer);
-  for (let i = 0; i < newEtchCheck(); i++) {
+  let newEtch = newEtchCheck();
+  for (let i = 0; i < newEtch; i++) {
     const gridDiv = document.createElement('div');
     gridDiv.classList.add('grid-border');
     gridContainer.appendChild(gridDiv);
   }
+  gridDivHover.forEach((div) => {
+      div.addEventListener('mouseover', () => {
+      div.classList.add('black');
+    });
+  });
 });
 
 const gridDivHover = document.querySelectorAll('.grid-border');

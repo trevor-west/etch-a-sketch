@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: gray;
   height: 100vh;
 }
 
 #grid-container {
-  border: black solid 1px;
   padding: 0px;
-  max-width: 640px;
-  max-height: 640px;
+  max-width: 500px;
+  min-height: 500px;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@
 
 .grid-border {
   background: white;
-  padding: 10px;
+  padding: 15px;
 }
 
 .red-text {
