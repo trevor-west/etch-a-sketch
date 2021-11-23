@@ -1,29 +1,21 @@
-.flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: gray;
-  height: 100vh;
+body {
+  background: #E5E2C7;
 }
 
-#grid-container {
-  padding: 0px;
-  max-width: 500px;
-  min-height: 500px;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
+.grid-box-16 {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  background: #EFE7CC;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
 }
 
-.grid-item {
-  background: white;
-  padding: 15px;
+.box-div {
+  background-color: white;
 }
 
-.red-text {
-  color: red;
-}
-
-.black {
-  background: black;
+.black-select {
+  background-color: black;
 }
