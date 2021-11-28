@@ -2,18 +2,14 @@ body {
   background: #E5E2C7;
 }
 
-.grid-box-16 {
+.grid-box {
   display: grid;
+  background-color: white;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  background: #EFE7CC;
   width: 500px;
   height: 500px;
-  margin: 150px auto auto auto;
-}
-
-.box-div {
-  background-color: white;
+  margin: 100px auto;
 }
 
 .black-select {
