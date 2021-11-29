@@ -15,10 +15,27 @@ function sixteenLoop() {
 
 sixteenLoop();
 
+/* random color / random code start */
+
+// credit: https://webdesign.tutsplus.com/tutorials/generate-random-background-colors-javascript--cms-37030
+
+const getRandomNumber = (maxNum) => {
+  return Math.floor(Math.random() * maxNum);
+};
+
+const getRandomColor = () => {
+  const h = getRandomNumber(360);
+  const s = getRandomNumber(100);
+  const l = getRandomNumber(100);
+
+  return `hsl(${h}deg, ${s}%, ${l}%)`;
+}
+
 // add event listener for mouse hover to turn box div bkrg. color into black
 const boxDivs = document.querySelectorAll(".box-div");
 
 blackSelectListener();
+randomColorSelectListener();
 
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
@@ -62,19 +79,3 @@ newGridButton.addEventListener('click', () => {
   blackSelectListener();
   randomColorSelectListener();
 });
-
-/* random color / random code start */
-
-// credit: https://webdesign.tutsplus.com/tutorials/generate-random-background-colors-javascript--cms-37030
-
-const getRandomNumber = (maxNum) => {
-  return Math.floor(Math.random() * maxNum);
-};
-
-const getRandomColor = () => {
-  const h = getRandomNumber(360);
-  const s = getRandomNumber(100);
-  const l = getRandomNumber(100);
-
-  return `hsl(${h}deg, ${s}%, ${l}%)`;
-}
