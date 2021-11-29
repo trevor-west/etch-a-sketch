@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-const gridContainer = document.querySelector('#flex-grid');
-
-// 16 x 16 grid, so 256 divs
-for (let i = 0; i < 256; i++) {
-  const gridDiv = document.createElement('div');
-  gridDiv.classList.add('grid-item');
-  gridContainer.appendChild(gridDiv);
-}
-
-const gridDivHover = document.querySelectorAll('.grid-item');
-
-gridDivHover.forEach((div) => {
-    div.addEventListener('mouseover', () => {
-    div.classList.add('black');
-  });
-});
-
-/*
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-}
-*/
-/*
-function newEtchCheck(newEtch) {
-  newEtch = prompt("What do you want the size of the new grid? (max 100)");
-  if (newEtch > 100) {
-    newEtch = prompt("Please enter a size of the grid below 100.")
-  } else if (newEtch <= 100) {
-    newEtch = newEtch * newEtch;
-    return newEtch;
-  }
-=======
 // define query selector for css class grid-box;
 const gridBox = document.querySelector('.grid-box');
 
@@ -64,28 +29,11 @@ const getRandomColor = () => {
   const l = getRandomNumber(100);
 
   return `hsl(${h}deg, ${s}%, ${l}%)`;
->>>>>>> cssGrid
 }
-*/
 
 // add event listener for mouse hover to turn box div bkrg. color into black
 const boxDivs = document.querySelectorAll(".box-div");
 
-<<<<<<< HEAD
-/*
-btn.addEventListener('click', () => {
-  gridDivHover.forEach((div) => {
-    div.classList.remove('black');
-  });
-  removeAllChildNodes(gridContainer);
-  for (let i = 0; i < newEtchCheck(); i++) {
-    const gridDiv = document.createElement('div');
-    gridDiv.classList.add('grid-item');
-    gridContainer.appendChild(gridDiv);
-  }
-});
-*/
-=======
 blackSelectListener();
 randomColorSelectListener();
 
@@ -131,4 +79,3 @@ newGridButton.addEventListener('click', () => {
   blackSelectListener();
   randomColorSelectListener();
 });
->>>>>>> cssGrid
