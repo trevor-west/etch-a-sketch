@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .flex-container {
   display: flex;
   justify-content: center;
@@ -32,4 +33,22 @@
 
 .black {
   background: black;
+=======
+body {
+  background: #E5E2C7;
+}
+
+.grid-box {
+  display: grid;
+  background-color: white;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+}
+
+.black-select {
+  background-color: black;
+>>>>>>> cssGrid
 }
