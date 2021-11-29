@@ -18,11 +18,7 @@ sixteenLoop();
 // add event listener for mouse hover to turn box div bkrg. color into black
 const boxDivs = document.querySelectorAll(".box-div");
 
-boxDivs.forEach((div) => {
-  div.addEventListener('mouseover', () => {
-    div.classList.add('black-select');
-  });
-});
+blackSelectListener();
 
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
@@ -35,6 +31,16 @@ function blackSelectListener() {
   boxDivs.forEach((div) => {
     div.addEventListener('mouseover', () => {
       div.classList.add('black-select');
+    });
+  });
+}
+
+function randomColorSelectListener() {
+  const boxDivs = document.querySelectorAll(".box-div");
+  const randomColor = getRandomColor();
+  boxDivs.forEach((div) => {
+    div.addEventListener('mouseover', () => {
+      div.style.backgroundColor = randomColor;
     });
   });
 }
@@ -54,4 +60,21 @@ newGridButton.addEventListener('click', () => {
     }
   }
   blackSelectListener();
+  randomColorSelectListener();
 });
+
+/* random color / random code start */
+
+// credit: https://webdesign.tutsplus.com/tutorials/generate-random-background-colors-javascript--cms-37030
+
+const getRandomNumber = (maxNum) => {
+  return Math.floor(Math.random() * maxNum);
+};
+
+const getRandomColor = () => {
+  const h = getRandomNumber(360);
+  const s = getRandomNumber(100);
+  const l = getRandomNumber(100);
+
+  return `hsl(${h}deg, ${s}%, ${l}%)`;
+}
